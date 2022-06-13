@@ -5,27 +5,39 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".FirstFragment">
-
-    <TextView
-            android:id="@+id/textview_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/hello_first_fragment"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/button_first"
-    />
+        tools:context=".FirstFragment" android:padding="50dp">
 
     <Button
             android:id="@+id/button_first"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/next"
-            app:layout_constraintTop_toBottomOf="@id/textview_first"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-    />
+            app:backgroundTint="@color/purple_700"/>
+    <EditText
+            android:layout_width="401dp"
+            android:layout_height="61dp"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/editTextNumber"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="96dp"/>
+    <TextView
+            android:text="Enter CEP to search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editTextNumber" app:layout_constraintVertical_bias="0.56"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.52"
+            style="@style/Widget.AppCompat.TextView" android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
+    <com.google.android.gms.maps.MapView
+            android:layout_width="306dp"
+            android:layout_height="262dp" android:id="@+id/mapView"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button_first"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumber"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
